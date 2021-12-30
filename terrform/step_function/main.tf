@@ -11,6 +11,7 @@ resource "aws_sfn_state_machine" "sfn_state_machine" {
   "Comment": "A Hello World example of the Amazon States Language using an AWS Lambda Function",
   "StartAt": "HelloWorld",
   "States": {
+    
     "HelloWorld": {
       "Type": "Task",
       "Resource": "${module.lambda_module.lambda_function.arn}",

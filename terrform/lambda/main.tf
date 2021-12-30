@@ -1,4 +1,3 @@
-
 resource "aws_lambda_function" "lambda_function" {
   function_name = "${var.lambda_function_name}"
   filename = data.archive_file.lambda_zip_file.output_path
@@ -50,4 +49,3 @@ resource "aws_iam_role" "lambda_assume_role_policy" {
   }
   EOF
 }
-
